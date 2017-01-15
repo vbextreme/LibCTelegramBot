@@ -1,0 +1,22 @@
+#!/bin/bash
+
+if [[ $1 == 'z' ]]; then
+    echo "0" > /tmp/$2.counter
+    exit 0
+fi
+
+if [[ $1 == 'p' ]]; then
+	COUNT=$3
+    V=$(cat /tmp/$2.counter)
+    V=$(( V + 1 ))
+    echo $V > /tmp/$2.counter
+    V=$(( V * 100 ))
+    V=$(( V / COUNT ))
+    echo -n "$V%"
+    exit 0
+fi
+
+if [[ $1 == 'r' ]]; then
+    rm -f /tmp/$2.counter
+    exit 0
+fi
