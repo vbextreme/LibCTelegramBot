@@ -10,7 +10,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-This library requires [CURL](https://curl.haxx.se/)
+This library requires [CURL](https://curl.haxx.se/)<br/>
 Clone project
 
 ```
